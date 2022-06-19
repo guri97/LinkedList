@@ -6,43 +6,61 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-
-        public class LinkedList
+    public class Linkedlist
+    {
+        public Node Head;
+        public Node Tail;
+        public Linkedlist()
         {
-            internal Node head;
-            internal void Add(int data)
+            Head = null;
+            Tail = null;
+        }
+        public void AddNode(Node node)
+        {
+            if (Head == null && Tail == null)
             {
-                Node node = new Node(data);
-                if (this.head == null)
-                {
-
-                    this.head = node;
-                }
-                else
-                {
-                    Node temp = head;
-                    while (temp.next != null)
-                    {
-                        temp = temp.next;
-                    }
-                    temp.next = node;
-                }
-                Console.WriteLine("{0} inserted into linked list", node.data);
+                Head = node;
+                Tail = node;
             }
-            internal void Display()
+            else
             {
-                Node temp = this.head;
-                if (temp == null)
-                {
-                    Console.WriteLine("linkedlist is empty");
-                    return;
-                }
-                while (temp != null)
-                {
-                    Console.Write(temp.data + " ");
-                    temp = temp.next;
+                node.next = Head;
+                Head = node;
+            }
 
-                }
+        }
+        internal void Display()
+        {
+            Node temp = Head;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+                Console.WriteLine("Linked list");
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data);
+                if (temp.next != null)
+                    Console.WriteLine(">");
+                temp = temp.next;
             }
         }
+        public void AddatFirst(int element)
+        {
+            Node newnode = new Node(element);
+            newnode.next = Head;
+            Head = newnode;
+
+
+
+        }
+        public void printList()
+        {
+            Node tnode = Head;
+            while (tnode != null)
+            {
+                Console.WriteLine(tnode.data + " ");
+                tnode = tnode.next;
+            }
+        }
+    }
 }
