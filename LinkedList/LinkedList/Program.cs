@@ -12,15 +12,29 @@
             Node node3 = new Node(30);
             //linked.AddNode(node3);
             //linked.Display();
+            //uc2
             //linked.AddatFirst(70);
             //linked.AddatFirst(30);
             //linked.AddatFirst(56);
-            linked.append(56);
-            linked.append(30);
-            linked.append(70);
+            //uc3
+            //linked.append(56);
+            //linked.append(30);
+            //linked.append(70);
+
+            //pritn uc2 and 3
+            //linked.printList();
+            //uc4
+            linked.Head = null;
+            linked.Head = new Node(56);
+            linked.Head.next = new Node(70);
+            Console.WriteLine("Linked list before" + "insertion:");
+            linked.Display1();
+            linked.InsertAtMid(30);
+            Console.WriteLine("\nlinkedlist after " + "insertion:");
+            linked.Display1();
 
 
-            linked.printList();
+
 
 
         }
