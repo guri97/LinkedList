@@ -29,21 +29,22 @@ namespace LinkedList
             }
 
         }
-        //internal void Display()
-        //{
-        //    Node temp = Head;
-        //    if (temp == null)
-        //        Console.WriteLine("Linked list is empty");
-        //    else
-        //        Console.WriteLine("Linked list");
-        //    while (temp != null)
-        //    {
-        //        Console.WriteLine(temp.data);
-        //        if (temp.next != null)
-        //            Console.WriteLine(">");
-        //        temp = temp.next;
-        //    }
-        //}
+        //uc1,uc5 and uc6(print)
+        internal void Display()
+        {
+            Node temp = Head;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+                Console.Write("Linked list");
+            while (temp != null)
+            {
+                Console.Write(temp.data);
+                if (temp.next != null)
+                    Console.Write("->");
+                temp = temp.next;
+            }
+        }
         //uc2
         public void AddatFirst(int element)
         {
@@ -113,6 +114,17 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        //uc5
+        public void removeFront()//deletingNodeAtFirst
+        {
+            if (this.Head != null)
+            {
+                Node temp = this.Head;
+                this.Head = this.Head.next;
+                temp = null;
+            }
+        }
+
 
     }
 }

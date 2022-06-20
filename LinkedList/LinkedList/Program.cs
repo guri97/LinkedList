@@ -24,14 +24,23 @@
             //pritn uc2 and 3
             //linked.printList();
             //uc4
-            linked.Head = null;
-            linked.Head = new Node(56);
-            linked.Head.next = new Node(70);
-            Console.WriteLine("Linked list before" + "insertion:");
-            linked.Display1();
-            linked.InsertAtMid(30);
-            Console.WriteLine("\nlinkedlist after " + "insertion:");
-            linked.Display1();
+            //linked.Head = null;
+            //linked.Head = new Node(56);
+            //linked.Head.next = new Node(70);
+            //Console.WriteLine("Linked list before" + "insertion:");
+            //linked.Display1();
+            //linked.InsertAtMid(30);
+            //Console.WriteLine("\nlinkedlist after "+"insertion:");
+            //linked.Display1();
+            //uc5
+            linked.AddNode(node3);
+            linked.AddNode(node2);
+            linked.AddNode(node1);
+            Console.Write("Delete first element");
+            linked.removeFront();
+
+            linked.Display();
+
 
 
 
