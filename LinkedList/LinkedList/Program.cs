@@ -36,9 +36,10 @@
             linked.AddNode(node3);
             linked.AddNode(node2);
             linked.AddNode(node1);
-            Console.Write("Delete first element");
-            linked.removeFront();
-
+            //Console.Write("Delete first element");
+            //linked.removeFront();
+            Console.Write("Delete last element");
+            linked.DeletingNodeAtEnd();
             linked.Display();
 
 

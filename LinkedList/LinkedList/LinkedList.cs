@@ -124,6 +124,26 @@ namespace LinkedList
                 temp = null;
             }
         }
+        public void DeletingNodeAtEnd()
+        {
+            if (this.Head != null)
+            {
+                if (this.Head.next == null)
+                {
+                    this.Head = null;
+                }
+                else
+                {
+                    Node temp = this.Head;
+
+                    while (temp.next.next != null)
+                        temp = temp.next;
+                    Node lastNode = temp.next;
+                    temp.next = null;
+                    lastNode = null;
+                }
+            }
+        }
 
 
     }
